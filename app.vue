@@ -1,7 +1,9 @@
 <template>
-  <main class="py-20 px-10 text-center">
+  <header>
+    <Header />
+  </header>
+  <main>
     <NuxtPage />
-    <Footer />
   </main>
 </template>
 
