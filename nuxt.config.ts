@@ -3,7 +3,6 @@ import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
 import ViteComponents from 'vite-plugin-components'
-import viteSSR from 'vite-ssr/plugin'
 
 export default defineNuxtConfig({
   title: 'Portfolio',
@@ -81,7 +80,6 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [
-      viteSSR(),
       Pages({
         extensions: ['vue', 'md'],
       }),
