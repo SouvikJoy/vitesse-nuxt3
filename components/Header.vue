@@ -62,7 +62,11 @@
         </ul>
       </div>
 
-      <DarkToggle />
+      <div class="mobile-position">
+        <nav class="navigation">
+          <DarkToggle />
+        </nav>
+      </div>
     </nav>
   </div>
 </template>
