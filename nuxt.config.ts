@@ -1,4 +1,9 @@
 import { defineNuxtConfig } from 'nuxt3'
+import Pages from 'vite-plugin-pages'
+import { VitePWA } from 'vite-plugin-pwa'
+import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
+import ViteComponents from 'vite-plugin-components'
+import viteSSR from 'vite-ssr/plugin'
 
 export default defineNuxtConfig({
   title: 'Portfolio',
@@ -72,6 +77,68 @@ export default defineNuxtConfig({
     attributify: true,
     icons: {
       scale: 1.2,
+    },
+  },
+  vite: {
+    plugins: [
+      viteSSR(),
+      Pages({
+        extensions: ['vue', 'md'],
+      }),
+      ViteComponents({
+        // allow auto load markdown components under `./src/components/`
+        extensions: ['vue', 'md'],
+
+        // allow auto import and register components used in markdown
+        customLoaderMatcher: id => id.endsWith('.md'),
+
+        // auto import icons
+        customComponentResolvers: [
+          // https://github.com/antfu/vite-plugin-icons
+          ViteIconsResolver({
+            componentPrefix: '',
+            // enabledCollections: ['carbon']
+          }),
+        ],
+      }),
+      ViteIcons(),
+      VitePWA({
+        registerType: 'autoUpdate',
+        includeAssets: ['favicon.svg', 'robots.txt', 'safari-pinned-tab.svg'],
+        manifest: {
+          name: 'Portfolio',
+          short_name: 'Portfolio',
+          theme_color: '#ffffff',
+          icons: [
+            {
+              src: '/pwa-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+            },
+            {
+              src: '/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+            },
+            {
+              src: '/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any maskable',
+            },
+          ],
+        },
+      }),
+    ],
+    optimizeDeps: {
+      include: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+      ],
+      exclude: [
+        'vue-demi',
+      ],
     },
   },
 })
