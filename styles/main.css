@@ -1,4 +1,6 @@
 @charset "UTF-8";
+
+@import "fonts.css";
 /*--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -42,7 +44,8 @@ Author URL: http://w3layouts.com
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html {
   font-family: "Nexa Light", sans-serif;
@@ -55,7 +58,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -9586,24 +9588,18 @@ a.text-dark:hover, a.text-dark:focus {
 
 .noscroll {
   overflow: hidden;
-  height: 100vh; }
+  height: 100vh;
+}
 
 html {
-  scroll-behavior: smooth; }
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Jost', sans-serif;
-  background: var(--bg-color);
-  color: var(--font-color); }
+  scroll-behavior: smooth;
+}
 
 body a,
 button,
 .btn {
   cursor: pointer !important;
-  font-family: 'Jost', sans-serif; }
+}
 
 .clear {
   clear: both; }
@@ -9625,30 +9621,35 @@ label,
 li {
   -webkit-appearance: none;
   outline: none;
-  font-family: 'Jost', sans-serif; }
+}
 
 body a,
 button,
 .btn {
-  cursor: pointer !important; }
+  cursor: pointer !important;
+}
 
 a,
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 iframe {
   border: none;
-  display: block; }
+  display: block;
+}
 
 ul {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   color: var(--heading-color);
-  font-family: 'Jost', sans-serif; }
+  font-family: "Nexa Light", sans-serif;
+}
 
 p {
   margin: 0;
@@ -9656,7 +9657,8 @@ p {
   font-size: 1.2em;
   line-height: 28px;
   color: var(--font-color);
-  font-family: 'Jost', sans-serif; }
+  font-family: "Nexa Light", sans-serif;
+}
 
 li {
   list-style-type: none; }
