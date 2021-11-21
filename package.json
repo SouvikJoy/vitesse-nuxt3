@@ -6,14 +6,12 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "pinia": "^2.0.3",
-    "@vueuse/head": "^0.5.1"
+    "pinia": "^2.0.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.10.0",
     "@iconify-json/carbon": "^1.0.10",
     "@iconify-json/twemoji": "^1.0.2",
-    "@iconify/json": "^1.1.344",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@pinia/nuxt": "^0.1.5",
     "@unocss/nuxt": "^0.10.0",
@@ -21,11 +19,6 @@
     "eslint": "^7.32.0",
     "nuxt3": "latest",
     "typescript": "^4.4.4",
-    "vite-plugin-md": "^0.6.7",
-    "vite-plugin-pages": "^0.11.3",
-    "vite-plugin-pwa": "^0.11.3",
-    "vite-plugin-components": "^0.9.1",
-    "vite-plugin-icons": "^0.5.1",
     "cross-env": "^7.0.3"
   },
   "pnpm": {
