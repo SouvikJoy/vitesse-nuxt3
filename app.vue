@@ -3,7 +3,7 @@
     <Header />
   </header>
   <main>
-    <NuxtPage />
+    <NuxtPage :key="$route.fullPath" />
   </main>
   <footer>
     <Footer />
@@ -16,5 +16,4 @@ const { data } = await useFetch('/api/data', { pick: ['main'] })
 
 <style>
 @import '@unocss/reset/tailwind.css';
-@import '~/styles/main.css';
 </style>

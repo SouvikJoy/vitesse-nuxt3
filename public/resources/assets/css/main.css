@@ -1,45 +1,41 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Nexa";
+  font-weight: 300;
+  src: url("/fonts/nexa/Nexa-Light.eot"); /* IE9*/
+  src: url("/fonts/nexa/Nexa-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/nexa/Nexa-Light.woff") format("woff"),
+  url("/fonts/nexa/Nexa-Light.otf") format("opentype"),
+  url("/fonts/nexa/Nexa-Light.ttf") format("truetype");
+}
 
-@import "fonts.css";
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
---*/
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #00DC82;
-  --secondary: #273c66;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+@font-face {
+  font-family: "Nexa";
+  font-weight: normal;
+  src: url("/fonts/nexa/Nexa-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Nexa";
+  font-weight: bold;
+  src: url("/fonts/nexa/Nexa-Bold.eot"); /* IE9*/
+  src: url("/fonts/nexa/Nexa-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/nexa/Nexa-Bold.woff") format("woff"),
+  url("/fonts/nexa/Nexa-Bold.otf") format("opentype"),
+  url("/fonts/nexa/Nexa-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"),
+  url("/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"),
+  url("/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"),
+  url("/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"),
+  url("/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 *,
 *::before,
@@ -48,16 +44,18 @@ Author URL: http://w3layouts.com
 }
 
 html {
-  font-family: "Nexa Light", sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
   margin: 0;
+  font-family: "Nexa Light", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -76,11 +74,13 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-family: "Nexa Light", sans-serif;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: "Nexa Light", sans-serif;
 }
 
 abbr[title],
@@ -171,7 +171,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Nexa Light", sans-serif;
   font-size: 1em; }
 
 pre {
@@ -324,7 +324,8 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
-  line-height: 1.2; }
+  line-height: 1.2;
+}
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -9568,7 +9569,7 @@ a.text-dark:hover, a.text-dark:focus {
   --border-light: #ddd;
   --nav-color: #292922;
   --dropdown-color: #fff;
-  --bg-light: rgba(147, 107, 232, 0.05);
+  --bg-light: rgba(115, 232, 124, 0.05);
   --iframe-filter: grayscale(0%);
   --widget-bg: #3f3a64; }
 
@@ -9592,13 +9593,20 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--font-color); }
 
 body a,
 button,
 .btn {
   cursor: pointer !important;
+  font-family: "Nexa Light", sans-serif;
 }
 
 .clear {
@@ -9621,28 +9629,25 @@ label,
 li {
   -webkit-appearance: none;
   outline: none;
+  font-family: "Nexa Light", sans-serif;
 }
 
 body a,
 button,
 .btn {
-  cursor: pointer !important;
-}
+  cursor: pointer !important; }
 
 a,
 a:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 iframe {
   border: none;
-  display: block;
-}
+  display: block; }
 
 ul {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -9850,7 +9855,6 @@ a.link-style:hover:before {
 
 .gg-sun {
   position: relative;
-  transform: scale(var(--ggs, 1));
   height: 24px;
   background: linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat 5px -6px/2px 6px, linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat 5px 14px/2px 6px, linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat -8px 5px/6px 2px, linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat 14px 5px/6px 2px;
   border-radius: 100px;
@@ -9860,7 +9864,6 @@ a.link-style:hover:before {
 .gg-moon {
   overflow: hidden;
   position: relative;
-  transform: rotate(-135deg) scale(var(--ggs, 1));
   width: 20px;
   height: 20px;
   border: 2px solid;
@@ -9932,19 +9935,21 @@ button.navbar-toggler.collapsed .icon-expand {
 
 .phone a {
   font-size: 18px;
-  color: var(--text-color);
-  font-weight: 500; }
+  font-weight: 500;
+}
 
 .phone a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 .phone a span {
   opacity: 0.5;
-  color: var(--secondary-color); }
+  color: var(--secondary-color);
+}
 
 header {
   background-color: var(--bg-color);
-  padding: 0px;
+  padding: 0;
   transition: all 0.4s ease 0s;
   height: 90px;
   display: grid;
@@ -9983,7 +9988,7 @@ a.dropdown-item:before {
   position: absolute;
   content: '';
   background: #00DC82;
-  width: 0px;
+  width: 0;
   height: 1px;
   bottom: 13px; }
 
@@ -10062,26 +10067,26 @@ a.dropdown-item.active {
   position: absolute;
   top: -7px;
   left: 49%;
-  z-index: 1001; }
+  z-index: 1001;
+}
 
 header.nav-fixed {
-  padding: 0px;
+  padding: 0;
   background-color: var(--bg-color);
-  height: 80px;
+  height: 60px;
   border-bottom: none;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05); }
-
-.navbar-dark .navbar-nav .show >,
-.navbar-dark .navbar-nav .nav-link.show {
-  color: var(--para-color); }
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+}
 
 nav ul li {
-  display: inline-block; }
+  display: inline-block;
+}
 
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
-  transition: all .5s; }
+  transition: all .5s;
+}
 
 nav ul li a:hover {
   color: #fff; }
@@ -10090,18 +10095,21 @@ nav ul li a:hover {
   color: #eee; }
 
 .dropdown-toggle::after {
-  display: none; }
+  display: none;
+}
 
 .dropdown-menu {
   border-radius: var(--border-radius);
   background: var(--dropdown-color);
   border: 1px solid var(--border-color);
   min-width: 13rem;
-  padding: 1rem 0 .3rem; }
+  padding: 1rem 0 .3rem;
+}
 
 .nav-fixed .phone a span {
   opacity: 1;
-  color: #00DC82; }
+  color: #00DC82;
+}
 
 .nav-fixed .navbar-expand-lg .navbar-nav li.nav-item.active .nav-link {
   color: #00DC82; }
@@ -10130,12 +10138,12 @@ nav ul li a:hover {
     padding: 10px 20px;
     font-size: 14px; }
   .navbar-expand-lg .navbar-nav.nav_btn > li {
-    margin-left: 0px; }
+    margin-left: 0; }
   .navbar-expand-lg .navbar-nav.nav_btn a.btn {
     padding: 10px 20px; }
   .navbar-expand-lg .navbar-nav.nav_btn a {
     font-size: 14px;
-    padding: 0px; } }
+    padding: 0; } }
 
 @media only screen and (max-width: 991px) {
   .popup {
@@ -10448,7 +10456,7 @@ span.cursor {
 .w3l-clients blockquote q {
   font-size: 1.2em;
   line-height: 28px;
-  color: var(--para-color); }
+}
 
 .w3l-clients blockquote q::before {
   font-size: 50px;
@@ -11109,7 +11117,6 @@ span.cursor {
 
 .owl-carousel.owl-grab {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: grab; }
 
 .owl-carousel.owl-rtl {
@@ -11173,7 +11180,6 @@ span.cursor {
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url(owl.video.play.png) no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -11429,7 +11435,7 @@ button::-moz-focus-inner {
 .mfp-close {
   line-height: 40px;
   position: absolute;
-  right: 0px;
+  right: 0;
   top: -40px;
   text-decoration: none;
   text-align: center;
